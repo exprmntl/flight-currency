@@ -15,7 +15,7 @@
 
 - Uploaded version 1.1.0 and verified the dashboard shows draft 1.1.0 separately from published 0.1.0. Status explicitly says “This draft is unpublished.” No review submission or publication was performed.
 - Saved title and summary from the package; replaced the description with `store-description.txt`, removed both obsolete screenshots, and uploaded the lighter-subtitle multi-currency screenshot and promo tile.
-- Added homepage https://experimental.software and support https://github.com/alexanderqchen/google-flights-currency/issues. Saved single-purpose/storage/host-permission explanations and reviewer instructions. Existing no-collection declarations and no-remote-code declaration remain accurate. GA4 remains off.
+- Added homepage https://experimental.software and the project's GitHub Issues support URL. Saved single-purpose/storage/host-permission explanations and reviewer instructions. Existing no-collection declarations and no-remote-code declaration remain accurate. GA4 remains off.
 - The old public privacy policy at FreePrivacyPolicy.com inaccurately describes generic personal/usage-data collection. Its live URL was left unchanged. A replacement is prepared in the website PR at `src/app/flight-currency/privacy/page.tsx`; after it is publicly available, change the store draft policy URL to https://experimental.software/flight-currency/privacy before submission.
 - Website card artwork/name/copy are prepared for the new release in existing website PR #15. Coordinate publication; the extension feature is not live yet.
 
@@ -38,3 +38,11 @@ Version 1.1.3 restores the black-background primary icon for the Chrome Store, p
 ## Release readiness
 
 Version 1.1.3 passes all six Node tests. The final store description uses a comma-separated currency list, explains the travel problem, and omits the former-name paragraphs and product-credit line. The production privacy-policy route must be reachable before Chrome Web Store submission.
+
+## Repository migration follow-up — 2026-09-16
+
+The repository now lives at https://github.com/exprmntl/google-flights-currency. The canonical support URL is https://github.com/exprmntl/google-flights-currency/issues.
+
+The Chrome Web Store dashboard was checked after the transfer. The submitted update is **Pending review**, and its Support URL field is disabled. It still contains the previous personal-account URL, which was verified to redirect successfully to the canonical support URL. Once the listing is editable, replace that field with the canonical URL above. The current review was not withdrawn or resubmitted for this URL correction.
+
+The production privacy policy is available at https://experimental.software/flight-currency/privacy; its two support links are included in the website's repository-migration fix. The extension source contains no old-owner repository links, so no new extension package or version is needed for this migration.
