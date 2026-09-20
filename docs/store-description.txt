@@ -1,0 +1,16 @@
+Flight Currency for Google Flights keeps flight prices in the currency you choose, wherever you search.
+
+Google Flights sets your default currency based on your location. This is frustrating when you're traveling and aren't familiar with the local currency. Flight Currency remembers your preference and applies it automatically, so you don't need to change the currency on every visit.
+
+CHOOSE YOUR CURRENCY
+Select from 71 currencies supported by Google Flights, including US Dollar (USD), Euro (EUR), British Pound (GBP), Canadian Dollar (CAD), Australian Dollar (AUD), Japanese Yen (JPY), Indian Rupee (INR), Chinese Yuan (CNY), Swiss Franc (CHF), Singapore Dollar (SGD), Hong Kong Dollar (HKD), United Arab Emirates Dirham (AED), and South Korean Won (KRW).
+
+HOW IT WORKS
+1. Pin Flight Currency to your Chrome toolbar.
+2. Open the extension and choose your preferred currency from the dropdown.
+3. Search Google Flights as usual. Your choice is saved automatically and applied to open Google Flights tabs and future visits.
+
+Your flight search, dates, route, and language settings are preserved. Change your preference at any time. USD is the default until you choose another currency. If Google Flights is already open when you install the extension, refresh that tab once.
+
+SIMPLE AND PRIVATE
+No account or setup beyond choosing a currency. No ads or analytics. The extension stores only your currency preference in Chrome storage; Chrome may sync that preference when browser sync is enabled. We do not collect your browsing history, flight searches, or personal information.

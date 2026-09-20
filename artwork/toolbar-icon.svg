@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <title>Flight Currency</title>
+  <path d="M8 0h112a8 8 0 0 1 8 8v40a16 16 0 0 0 0 32v40a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V80a16 16 0 0 0 0-32V8a8 8 0 0 1 8-8Z" fill="#dfff00"/>
+  <path d="M28 32h48V20l24 20-24 20V48H28Z" fill="#171715"/>
+  <path d="M100 80H52V68L28 88l24 20V96h48Z" fill="#171715"/>
+</svg>

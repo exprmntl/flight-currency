@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "General Sans";
+  src: url("fonts/GeneralSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+* { box-sizing: border-box; }
+body { margin: 0; width: 320px; background: #fafaf8; color: #191919; font: 14px/1.5 "General Sans", sans-serif; }
+main { padding: 24px; }
+header { margin-bottom: 28px; }
+h1 { margin: 0; font-size: 25px; font-weight: 400; letter-spacing: -.03em; }
+header p { margin: 0; color: #73736e; font-size: 13px; }
+label { display: block; margin-bottom: 8px; font-size: 12px; }
+select { width: 100%; padding: 12px 10px; color: inherit; background: #fff; border: 1px solid #d7d7d1; border-radius: 0; font: inherit; cursor: pointer; }
+select:focus-visible, a:focus-visible { outline: 2px solid #191919; outline-offset: 3px; }
+select:disabled { cursor: wait; }
+#help { margin: 12px 0 16px; color: #73736e; font-size: 12px; }
+#status { min-height: 18px; margin: 0 0 22px; font-size: 12px; }
+#status[data-error="true"] { color: #a52a20; }
+a { display: flex; justify-content: space-between; padding-top: 16px; border-top: 1px solid #deded8; color: inherit; font-size: 12px; text-decoration: none; }
+a:hover { text-decoration: underline; }

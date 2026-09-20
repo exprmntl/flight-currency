@@ -1,0 +1,21 @@
+# Flight Currency artwork
+
+Approved multi-currency campaign image with a lighter “for Google Flights” subtitle. Exports: 1280×800 store screenshot and 440×280 promo tile. `icon.svg` is the editable ticket-and-exchange icon source. It uses the campaign’s acid (#dfff00) and near-black (#171715) palette; PNG exports at 16, 32, 48 and 128 pixels live in `src/images/`. `icon-preview.png` is a 256-pixel review export. Legacy artwork is retained in `legacy/`.
+
+The primary icon (`icon.svg`) uses the acid ticket with a padded, rounded near-black background. Use it for the store listing, privacy page, and Chrome extension-management screens. Upload `src/images/icon-128.png` as the separate store-listing icon.
+
+The browser toolbar and Extensions dropdown use `toolbar-icon.svg`: the acid ticket fills the canvas, with transparent semicircular edge cutouts and larger exchange arrows. Its exports are `src/images/toolbar-16.png`, `src/images/toolbar-32.png`, and the review image `toolbar-icon-preview.png`. The manifest's `action.default_icon` points at these action assets; its top-level `icons` retain the primary black-background icon.
+
+## Generation prompts
+
+### current
+
+Edit the supplied Google Flights Currency Setter promotional artwork. Preserve its exact overall composition, premium Swiss graphic design, near-black background, off-white typography, acid-yellow boarding-pass motif, fine-line globe and flight path, airplane silhouette, generous spacing and landscape 8:5 aspect ratio. Preserve the large title exactly: "Google Flights" / "Currency" / "Setter". Change the bottom-left supporting copy to exactly: "Prices in your currency." / "Wherever you search." Keep it legible with enough space and no collision with the illustration. Change the ticket illustration to represent multiple selectable currencies rather than USD alone: use a tasteful fan of three overlapping boarding passes, each with a clearly readable code, "USD", "EUR", and "GBP". Keep the front pass acid-yellow, use off-white and a muted acid tint for the other two, dark text. Each currency code must be visibly readable; EUR is the euro code, not EU. Retain the simple airplane motif on the main ticket. Do not introduce flags, Google logos, gradients, app UI, buttons, price numbers, extra taglines, extra text, or a currency dropdown. Maintain the design the user likes and change only the supporting copy and the currency illustration. This is a design preview for an upcoming currency-choice feature, not a screenshot of working software.
+
+### renamed
+
+Edit the supplied multi-currency promotional artwork to make a naming comparison variant. Change ONLY the large title block on the upper left: replace "Google Flights Currency Setter" with "Flight" on line 1 and "Currency" on line 2, in the same off-white sans-serif type, scale, weight and aligned position. Directly below that two-line title add a smaller but clear line "for Google Flights" in off-white, visibly subordinate to the main title yet readable at thumbnail size. Keep the exact bottom-left copy "Prices in your currency." / "Wherever you search." unchanged. Preserve the entire right-side artwork without changes: the three boarding passes labeled GBP, EUR and USD, the acid-yellow front ticket, airplane silhouette, thin-line globe and flight path. Preserve background, palette, texture, margins and 8:5 landscape proportions. No other additions or changes. This is the same campaign graphic with an alternative product name, not a redesign.
+
+### light
+
+Make one precise typography edit to this Flight Currency promotional image. ONLY change the font weight of the subtitle "for Google Flights" directly beneath the large main heading. Set that subtitle to a noticeably lighter regular weight, approximately General Sans Regular 400 instead of the current bold/semi-bold weight. Keep exactly the same wording, font size, baseline, left alignment, off-white color, and placement. Preserve the big Flight Currency heading, the bottom "Prices in your currency. Wherever you search." copy, all three GBP / EUR / USD boarding passes, the airplane, globe, flight path, background texture, colors and composition completely unchanged. Do not redesign or add anything. Keep the same image dimensions and 8:5 landscape aspect ratio.
