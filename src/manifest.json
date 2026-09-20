@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Google Flights Currency Setter",
+  "name": "Flight Currency for Google Flights",
   "description": "Sets your preferred currency on Google Flights. Currency will no longer be location-based.",
   "version": "1.0",
   "icons": {
