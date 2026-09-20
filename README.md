@@ -1,6 +1,8 @@
-# Flight Currency for Google Flights
+# Flight Currency
 
 A tiny Manifest V3 extension that keeps Google Flights in your preferred currency. Choose from the 71 currencies in Google's current selector. Changes save automatically and apply to open Flights tabs and future visits. USD remains the default.
+
+[Chrome Web Store](https://chromewebstore.google.com/detail/nameliafoadmpledepdbcgnogcnfiemo) · [Support](https://github.com/exprmntl/flight-currency/issues) · [Privacy](https://experimental.software/flight-currency/privacy)
 
 ## Develop
 

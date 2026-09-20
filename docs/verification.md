@@ -41,7 +41,7 @@ Version 1.1.3 passes all six Node tests. The final store description uses a comm
 
 ## Repository migration follow-up — 2026-09-16
 
-The repository now lives at https://github.com/exprmntl/google-flights-currency. The canonical support URL is https://github.com/exprmntl/google-flights-currency/issues.
+The repository now lives at https://github.com/exprmntl/flight-currency. The canonical support URL is https://github.com/exprmntl/flight-currency/issues.
 
 The Chrome Web Store dashboard was checked after the transfer. The submitted update is **Pending review**, and its Support URL field is disabled. It still contains the previous personal-account URL, which was verified to redirect successfully to the canonical support URL. Once the listing is editable, replace that field with the canonical URL above. The current review was not withdrawn or resubmitted for this URL correction.
 
