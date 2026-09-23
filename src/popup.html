@@ -6,6 +6,7 @@
     <title>Flight Currency</title>
     <link rel="stylesheet" href="popup.css">
     <script src="currencies.js" defer></script>
+    <script src="hotel-state.js" defer></script>
     <script src="currency.js" defer></script>
     <script src="popup.js" defer></script>
   </head>
@@ -13,15 +14,16 @@
     <main>
       <header>
         <h1>Flight Currency</h1>
-        <p>for Google Flights</p>
+        <p>for Google Flights and Hotels</p>
       </header>
       <label for="currency">Preferred currency</label>
       <select id="currency" aria-describedby="help status" disabled>
         <option>Loading…</option>
       </select>
-      <p id="help">Applied automatically whenever you visit Google Flights.</p>
+      <p id="help">Applied automatically whenever you visit Google Flights or Hotels.</p>
       <p id="status" role="status" aria-live="polite">Loading your preference…</p>
       <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener">Open Google Flights <span aria-hidden="true">↗</span></a>
+      <a href="https://www.google.com/travel/hotels" target="_blank" rel="noopener">Open Google Hotels <span aria-hidden="true">↗</span></a>
     </main>
   </body>
 </html>

@@ -1,6 +1,6 @@
 # Flight Currency
 
-A tiny Manifest V3 extension that keeps Google Flights in your preferred currency. Choose from the 71 currencies in Google's current selector. Changes save automatically and apply to open Flights tabs and future visits. USD remains the default.
+A tiny Manifest V3 extension that keeps Google Flights and Hotels in your preferred currency. Choose from the 71 currencies in Google's Flights selector. Changes save automatically and apply to open Flights and Hotels tabs and future visits. USD remains the default.
 
 [Chrome Web Store](https://chromewebstore.google.com/detail/nameliafoadmpledepdbcgnogcnfiemo) · [Support](https://github.com/exprmntl/flight-currency/issues) · [Privacy](https://experimental.software/flight-currency/privacy)
 
@@ -19,18 +19,21 @@ The font is embedded locally in the extension, ignored by Git, and pinned by SHA
 
 `npm test` runs Node's built-in test runner. `npm run package` writes a deterministic ZIP to `dist/` containing only `src/` runtime assets. Node 22+ and Python 3 are used for development; the extension itself has no dependencies.
 
-Before a release, verify popup persistence, a fresh visit, an already-open Flights tab, a real search, Back/Forward, and a non-Flights Google Travel page. Upload the ZIP as a Web Store draft; submitting for review is a separate action.
+Before a release, verify popup persistence, fresh visits and already-open tabs for Flights and Hotels, real searches, Back/Forward, and an unrelated Google Travel page. Upload the ZIP as a Web Store draft; submitting for review is a separate action.
 
 ## Implementation and privacy
 
 - `currencies.js`: currency names and codes, verified against the live Google Flights selector on 2026-09-16. Compared with the old list, BGN was removed and NGN added.
-- `currency.js`: validates preferences and changes only the `curr` URL parameter on the exact `google.com` / `www.google.com` Flights paths. Search and language settings are preserved.
-- `content.js`: runs at document start and listens for Chrome storage updates and same-document Navigation API events. It runs on Google Travel paths to handle navigation into Flights; it changes only Flights URLs. Correct URLs are left untouched, and replacements do not add history entries.
+- `currency.js`: validates preferences and routes Google Flights and hotel results URLs to the appropriate currency setting. It only acts on the exact `google.com` / `www.google.com` Flights paths and `/travel/search` with encoded hotel state.
+- `hotel-state.js`: updates the currency field inside Hotels' encoded `ts` parameter, preserving unrelated search data. It handles the observed empty state and existing three-letter currency; unknown encodings are left untouched.
+- `content.js`: runs at document start and listens for Chrome storage updates and same-document Navigation API events. It runs on Google Travel paths to handle navigation into Flights or Hotels; it changes only those URLs. Correct URLs are left untouched, and replacements do not add history entries.
 - `popup.*`: native dropdown, automatic saving, accessible status and error states; General Sans Regular and White Room colors.
 
 Only the currency code is saved in `chrome.storage.sync`. Chrome may sync it between browsers signed into the same account when Chrome sync is enabled. We collect no personal data, browsing history, or search details. There is no analytics, advertising, remote code, or backend. No network interception, `tabs`, or browsing-history permission is used.
 
-The extension sets Google's display currency; it does not convert prices independently or control the currency charged by airlines or booking sites. Google controls available currencies. Existing Flights tabs must be refreshed once after initially loading the unpacked build.
+The extension sets Google's display currency; it does not convert prices independently or control the currency charged by airlines or booking sites. Google controls available currencies. Existing Travel tabs must be refreshed once after initially loading the unpacked build.
+
+Google does not document the Hotels `ts` layout. In a Chrome capture from 2026-09-23, Google's loaded JavaScript parses `ts` as a generated message and its currency selector writes nested field `5 → 1 → 7`. Hotel currency support relies on that observed path and must be checked against live Hotels searches before release. Unexpected state is left untouched.
 
 ## Source reconciliation
 
