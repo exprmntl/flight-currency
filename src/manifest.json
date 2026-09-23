@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Flight Currency for Google Flights",
-  "description": "Choose your preferred Google Flights currency. Automatically show flight prices in USD, EUR, GBP, CAD, AUD, JPY, INR and more.",
+  "description": "Choose your preferred currency for Google Flights and Hotels. Automatically show travel prices in USD, EUR, GBP, CAD, AUD, JPY, INR and more.",
   "version": "1.1.3",
   "minimum_chrome_version": "102",
   "icons": {
@@ -21,7 +21,7 @@
   "permissions": ["storage"],
   "content_scripts": [{
     "matches": ["https://www.google.com/travel/*", "https://google.com/travel/*"],
-    "js": ["currencies.js", "currency.js", "content.js"],
+    "js": ["currencies.js", "hotel-state.js", "currency.js", "content.js"],
     "run_at": "document_start"
   }]
 }
